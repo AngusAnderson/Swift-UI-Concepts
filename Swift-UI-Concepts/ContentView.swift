@@ -6,20 +6,12 @@ struct ContentView: View {
 
     var body: some View {
         ZStack {
-            Color.white
-                .ignoresSafeArea()
-
-            VStack {
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundStyle(.tint)
-            }
-            .padding()
+            TabView()
         }
         .preferredColorScheme(.light)
         .splashScreen(
             config: .init(),
-            showOnBoarding: true
+            showOnBoarding: !isOnboardingCompleted
         ) {
             OnBoardingView()
         }
