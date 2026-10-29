@@ -3,7 +3,7 @@ import AuthenticationServices
 
 struct OnBoardingView: View {
     
-//    @AppStorage("isOnboardingCompleted") private var isOnboardingCompleted: Bool = false
+    @AppStorage("isOnboardingCompleted") private var isOnboardingCompleted: Bool = false
     
     @Environment(\.dismiss) private var dismiss
     
@@ -16,7 +16,7 @@ struct OnBoardingView: View {
                 
             } onCompletion: { _ in
                 dismiss()
-//                isOnboardingCompleted = true
+                isOnboardingCompleted = true
             }
             .signInWithAppleButtonStyle(.black)
             .frame(height: 50)
